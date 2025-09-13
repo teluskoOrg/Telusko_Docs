@@ -4,6 +4,12 @@
 
 
 
+:root {
+  --color-fd-background: hsl(0, 0%, 100%);
+}
+.dark {
+  --color-fd-background: #0F0F11;
+}
 
 
 
@@ -14,6 +20,13 @@
     p{
         @apply text-gray-500
     }
+    .stack-icon{
+        @apply h-[34px]
+    }
+    .why-card{
+        @apply dark:bg-[#161618] bg-[#F7F7F8]
+    }
+    
 }
 
 
