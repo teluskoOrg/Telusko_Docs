@@ -57,7 +57,7 @@ function FAQ({ title, content }: Item) {
         animate={{
           opacity : 1,
           y : 0,
-          height : 50
+          height : 'auto'
         }}
         exit={{
           opacity : 0,
