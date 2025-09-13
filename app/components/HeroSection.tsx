@@ -18,6 +18,7 @@ function HeroSection() {
           Telusko Docs –{" "}
           <span className="text-violet-400">Your Guide to Tech Stacks</span>
         </motion.h1>
+        
 
         {/* Subtitle */}
         <motion.p
