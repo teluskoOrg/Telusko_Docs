@@ -120,7 +120,7 @@ function WhatComponent() {
               <img className="icon" src="/icons/git.svg" alt="Git" />
             </div>
           </div>
-          <p className="text-gray-400 mt-auto">Git, APIs, Testing, Security Best Practices</p>
+          <p className="text-gray-400 mt-3">Git, APIs, Testing, Security Best Practices</p>
         </div>
 
       </div>
