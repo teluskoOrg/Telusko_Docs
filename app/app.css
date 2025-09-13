@@ -16,6 +16,7 @@
 
 
 
+
 @layer base {
     p{
         @apply dark:text-gray-400  text-gray-700 
@@ -49,6 +50,10 @@
     .icon {
         @apply h-8 w-8 object-contain;
     }
+    .fumadocs-toc a.active {
+  @apply text-blue-500 font-medium;
+}
+
 
   
 }
