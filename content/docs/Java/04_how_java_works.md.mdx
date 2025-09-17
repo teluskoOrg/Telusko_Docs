@@ -1,0 +1,91 @@
+---
+title: 04_how_java_works
+---
+
+# Lecture 4 – **How Java Works**
+
+## Basic Flow
+
+* To run **Hello World**, we need the **JVM (Java Virtual Machine)**.
+* **OS** works on hardware.
+* **JVM** works on top of OS → allows Java to be **platform independent**.
+
+***
+
+## Platform Independence
+
+* **Write Once, Run Anywhere (WORA):**
+  * Code written on one machine can run on any other, **if JVM is installed**.
+
+***
+
+## Java Code Execution Flow
+
+1. Write Java code (`.java` file).
+2. Compile with **javac** → generates **bytecode (`.class` file)**.
+3. **JVM executes bytecode** → converts to machine code (runs on OS/hardware).
+
+### Example:
+
+```java
+public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+```
+
+### Commands:
+
+```bash
+javac Hello.java    # Compile → generates Hello.class
+java Hello          # Run → output: Hello World
+```
+
+***
+
+## Main Method Signature
+
+* **Required entry point** of every Java application:
+
+```java
+  public static void main(String[] args)
+```
+
+* JVM **invokes `main`** to start execution.
+* Without this exact signature, program won’t run.
+
+***
+
+## Diagram 1 – Code to Execution
+
+```
+Java Code (.java)  --javac-->  Bytecode (.class)  --JVM-->  Machine Code
+```
+
+***
+
+## JDK, JRE, JVM
+
+* **JDK (Java Development Kit):** Development tools (compiler, debugger, JRE).
+* **JRE (Java Runtime Environment):** Libraries + JVM needed to run programs.
+* **JVM (Java Virtual Machine):** Executes bytecode.
+
+## Diagram 2 – Inside JDK
+
+```
+JDK
+ ├── JRE
+ │    ├── Libraries
+ │    └── JVM
+ └── Tools (javac, debugger, etc.)
+```
+
+***
+
+⚡ Key Points:
+
+* `.java` → source code
+* `.class` → bytecode
+* JVM executes bytecode
+* Java is **OOP**, hence class is mandatory
