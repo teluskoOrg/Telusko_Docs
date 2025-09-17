@@ -1,0 +1,61 @@
+---
+title: 03_first_code_in_java
+---
+
+# Lecture 3 – **First Code in Java**
+
+## Checking Installation in VS Code Terminal
+
+* Open **VS Code terminal** (it has its own built-in terminal).
+* Verify installation:
+
+```bash
+  java -version
+  javac -version
+```
+
+***
+
+## Creating First Java File
+
+1. Create a file → **Hello.java**
+   * `.java` is the extension for all Java source files.
+
+***
+
+## JShell (Interactive Mode)
+
+* Java also provides **JShell** (introduced in Java 9) for quick testing.
+* Open in command prompt/terminal:
+
+```bash
+  jshell
+```
+
+* Try:
+
+```bash
+  2 + 3       // Output: 5
+  9 - 6       // Output: 3
+  print(6)    // Error
+  System.out.print(6)     // Correct way
+  System.out.println("Hello World") 
+```
+
+***
+
+## Compiling and Running Code
+
+* Example code like jshell
+
+```java
+           System.out.println("Hello World");
+```
+
+* To compile:
+
+```bash
+  javac Hello.java
+```
+
+* Got error because for Hello.java we didnot provide complete code
