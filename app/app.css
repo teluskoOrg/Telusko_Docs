@@ -1,0 +1,59 @@
+@import 'tailwindcss';
+@import 'fumadocs-ui/css/vitepress.css';
+@import 'fumadocs-ui/css/preset.css';
+
+
+
+:root {
+  --color-fd-background: hsl(0, 0%, 100%);
+}
+.dark {
+  --color-fd-background: #0F0F11;
+}
+
+
+
+
+
+
+
+@layer base {
+    p{
+        @apply dark:text-gray-400  text-gray-700 
+    }
+}
+
+
+
+@layer components{
+    .stack-icon{
+        @apply h-[34px]
+    }
+    .why-card{
+        @apply dark:bg-[#161618] bg-[#F7F7F8]
+    }
+    .hero-btn{
+        @apply py-2 px-3 rounded-xl font-medium active:scale-95
+    }
+
+    /* .icon {
+        @apply h-10 w-10 object-contain transition-transform duration-200 hover:scale-110;
+    } */
+    .icon-wrapper {
+        @apply h-14 w-14 flex items-center justify-center rounded-xl 
+            shadow-md bg-white dark:bg-neutral-900 
+            border border-gray-200/20 
+            hover:scale-105 transition-transform;
+    }
+
+    .icon {
+        @apply h-8 w-8 object-contain;
+    }
+    .fumadocs-toc a.active {
+  @apply text-blue-500 font-medium;
+}
+
+
+  
+}
+
