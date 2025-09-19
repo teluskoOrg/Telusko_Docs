@@ -1,81 +1,114 @@
-import React from "react";
-import { ArrowRight } from "lucide-react";
+import React, { useEffect } from "react";
+import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router"
 
 function HeroSection() {
+
   return (
-    <section className="relative dark:bg-gradient-to-b from-[#1A1A1E] to-[#0F0F11]  dark:text-white overflow-hidden">
-      <div 
-      className="max-w-6xl mx-auto px-6 py-20 text-center relative z-10">
-        {/* Title */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl sm:text-6xl font-extrabold leading-tight tracking-tight mb-6"
-        >
-          Telusko Docs –{" "}
-          <span className="text-violet-400">Your Guide to Tech Stacks</span>
-        </motion.h1>
-        
+    <section className="relative font-DM-Sans  dark:text-white overflow-hidden ">
+      <motion.div
+      className="max-w-6xl mx-auto px-6 py-20 text-center relative z-10 flex flex-col gap-4 items-center"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      {/* Title */}
+      <motion.h1
+        className="text-[3.875rem] font-bold text-[#EA0000]"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+      >
+        <span className="font-UX font-[700] text-[#051A1E] dark:text-[#F4F4F4]">Telusko</span> <span 
+        className="font-Playfair font-medium"><i>Docs</i></span>
+      </motion.h1>
 
-        {/* Subtitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-lg sm:text-xl dark:text-gray-300 max-w-2xl mx-auto leading-relaxed mb-8"
-        >
-          Learning new technologies can feel overwhelming. Telusko Docs makes it
-          simple by providing clear, structured, and beginner-friendly
-          documentation for popular tech stacks — from backend frameworks to
-          frontend libraries, cloud platforms, and beyond.
-        </motion.p>
+      <motion.p
+        className="text-[1.5rem] text-[#2C2D2D] dark:text-[#EFEFEF] text-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4, duration: 0.6 }}
+      >
+        Learning new technologies can feel overwhelming. 
+        Telusko Docs makes it simple by providing clear, structured, and 
+        beginner-friendly documentation for popular tech stacks — from backend 
+        frameworks to frontend libraries, cloud platforms, and beyond.
+      </motion.p>
 
-
-        <motion.div
-          className="hover:scale-105 duration-300"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+      <Link to="/docs" className="w-fit">
+        <motion.button
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6, duration: 0.6 }}
           whileHover="hover"
+          
+          className="cursor-pointer flex gap-2 justify-center items-center w-fit py-4 px-8 
+                     dark:bg-white dark:text-black bg-[#051A1E] text-[#FAFFFC] rounded-2xl"
         >
-          <Link
-            to="/docs"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-violet-600 hover:bg-violet-700 rounded-2xl text-lg font-medium transition-colors shadow-lg text-white"
-          >
-            Get Started <motion.div
+          Get Started
+          <motion.span
             variants={{
-                hover : {
-                    x : [0,12,0]
-                }
+              hover: { x: [0, 4, 0], y: [0, -4, 0] }, 
             }}
             transition={{
-                repeat : Infinity,
+              repeat: Infinity,
+              duration: 0.6,
+              ease: "easeInOut",
             }}
-            >
-                <ArrowRight size={20} /> 
-                 </motion.div>
-          </Link>
-        </motion.div>
+          >
+            <ArrowUpRight size={20} />
+          </motion.span>
+        </motion.button>
+      </Link>
 
-        {/* Extra line */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.9, delay: 0.6 }}
-          className="mt-6 dark:text-gray-400 max-w-xl mx-auto text-base"
-        >
-          Jump into any tech stack you want to explore. Whether you’re
-          building your first app or scaling a production system, Telusko Docs
-          is your one-stop knowledge base. Our goal: help you understand, build,
-          and scale projects faster.
-        </motion.p>
-      </div>
+      <motion.p
+        className="text-[1.125rem] text-[#7F7F7F] dark:text-[#BBBBBB] text-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.8, duration: 0.6 }}
+      >
+        Jump into any tech stack you want to explore. 
+        Whether you’re building your first app or scaling a production system, 
+        Telusko Docs is your one-stop knowledge base. Our goal: help you 
+        understand, build, and scale projects faster.
+      </motion.p>
+    </motion.div>
+      <div className="max-[1050px]:p-4 pb-4">
+        <motion.div
+        initial={{
+          opacity : 0,y : 100, scale : .95
+        }} 
+        whileInView={{
+          opacity : 1 , y : 0,  scale : 1 
+        }}
+        transition={{
+          duration : .6, delay : 0.8
+        }}
+        viewport={{ once :true ,  amount : 0}}
 
-      {/* Background Glow */}
-     <div className="absolute ]  "></div>
+        className="max-[1050px]:pb-4 w-full max-w-5xl mx-auto rounded-2xl overflow-hidden   border-4 md:shadow-[0_0_8px_4px_#EA0000]  border-[#BB0000] border-[#EA0000]">
+        <div className="max-md:justify-center flex  items-center gap-1 dark:bg-[#161618] bg-gray-100 px-3 py-2  border-b dark:border-[#000] border-gray-200">
+          <span className="max-md:hidden w-3 h-3 rounded-full bg-red-400"></span>
+          <span className="max-md:hidden w-3 h-3 rounded-full bg-yellow-400"></span>
+          <span className="max-md:hidden w-3 h-3 rounded-full bg-green-400"></span>
+          <span className="max-md:hidden ml-3 text-sm text-gray-500">https://docs.telusko.com/docs</span>
+          <span className="md:hidden flex justify-center items-center w-4 h-4 rounded-full bg-gray-300">
+            <span className="h-1 w-1 bg-black"> 
+            </span>
+          </span>
+        </div>
+        
+        <iframe
+          src="http://localhost:5173/docs"
+          className="w-full h-[600px] bg-white dark:bg-[#000] pointer-events-none"
+          frameBorder="0"
+          scrolling="no"
+          title="Website Preview"
+        />
+      </motion.div>
+    </div>
+      
 
     </section>
   );

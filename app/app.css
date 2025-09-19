@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 @import 'tailwindcss';
 @import 'fumadocs-ui/css/vitepress.css';
 @import 'fumadocs-ui/css/preset.css';
@@ -13,6 +16,34 @@
 
 
 
+@theme{
+    --font-DM-Sans : "DM Sans", sans-serif; 
+    --font-UX: "UX" , sans-serif;
+    --font-Italic: "Italic", sans-serif;
+    --font-PPE: "PPE", sans-serif;
+    --font-Playfair:"Playfair Display", serif;
+    --font-Thames : "ThamesCondensed", sans-serif;
+}
+
+
+@font-face {
+    font-family: "UX";
+    src: url('UxmBold.otf');
+}
+@font-face {
+    font-family: "Italic";
+    src: url('italic.otf');
+}
+
+@font-face {
+    font-family: "PPE";
+    src: url('PPEditorialNew-UltralightItalic-BF644b214ff1e9b.otf') format("opentype");
+}
+
+@font-face {
+    font-family: "Thames";
+    src: url('ThamesCondensed Regular.ttf');
+}
 
 
 
@@ -24,10 +55,9 @@
 }
 
 
-
 @layer components{
     .stack-icon{
-        @apply h-[34px]
+        @apply h-[34px] 
     }
     .why-card{
         @apply dark:bg-[#161618] bg-[#F7F7F8]
@@ -41,7 +71,7 @@
     } */
     .icon-wrapper {
         @apply h-14 w-14 flex items-center justify-center rounded-xl 
-            shadow-md bg-white dark:bg-neutral-900 
+            shadow-md bg-white dark:bg-gray-100
             border border-gray-200/20 
             hover:scale-105 transition-transform;
     }
@@ -53,7 +83,5 @@
   @apply text-blue-500 font-medium;
 }
 
-
-  
 }
 
