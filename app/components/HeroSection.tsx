@@ -100,7 +100,7 @@ function HeroSection() {
         </div>
         
         <iframe
-          src="http://localhost:5173/docs"
+          src="https://docs.telusko.com/docs"
           className="w-full h-[600px] bg-white dark:bg-[#000] pointer-events-none"
           frameBorder="0"
           scrolling="no"
