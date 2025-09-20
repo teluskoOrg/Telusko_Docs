@@ -1,0 +1,82 @@
+---
+title: 02_jdk_setup
+---
+
+<steps>
+  <step>
+    ## IDE vs Editor
+
+    * **IDE (Integrated Development Environment):**
+
+      * Examples: **IntelliJ IDEA, Eclipse, VS Code**
+      * Provides advanced features → debugging, autocomplete, project management, plugins.
+
+    * **Editor (Lightweight Tools):**
+
+      * Examples: **Notepad, VS Code, Notepad++, Sublime**
+      * Just text editing; no built-in compiler/debugger (need external setup).
+  </step>
+
+  <step>
+    ## JDK (Java Development Kit)
+
+    * **Compiler required** to compile Java code → provided by **JDK**.
+    * Install **JDK** (open-source builds like **OpenJDK** or official Oracle JDK).
+    * Always install the **latest version** to get **new features**.
+    * Java is **backward compatible**, so old code runs on newer JDKs.
+  </step>
+
+  <step>
+    ## LTS (Long Term Support)
+
+    * Stable versions supported for many years.
+    * Recommended LTS versions: **17, 21** (commonly used in industry).
+  </step>
+
+  <step>
+    ## Installation & Setup
+
+    ### Steps to Install JDK:
+
+    1. Download **JDK** (Oracle or OpenJDK).
+    2. Install → note the installation directory (e.g., `C:\Program Files\Java\jdk-21`).
+    3. Set **Environment Variables** →
+
+       * Add JDK **bin path** (e.g., `C:\Program Files\Java\jdk-21\bin`).
+
+    ### Environment Variables
+
+    * **User Variable** → applies only to the current user.
+    * **System Variable** → applies to all users in the system.
+
+    **To check version installed:**
+
+    ```bash
+    java -version
+    javac -version
+    ```
+
+    ### Steps to Install & Setup VS Code
+
+    1. Download and install **VS Code**.
+    2. Install **Java Extensions Pack** (from Extensions Marketplace).
+
+       * Important extensions:
+
+         * *Extension Pack for Java*
+         * *Debugger for Java*
+         * *Java Test Runner*
+         * *Maven for Java*
+    3. Open a new Java file → VS Code will automatically detect JDK.
+
+    ✅ Example check after setup:
+
+    ```java
+    public class Hello {
+        public static void main(String[] args) {
+            System.out.println("Hello, Java Setup Successful!");
+        }
+    }
+    ```
+  </step>
+</steps>
