@@ -2,24 +2,24 @@
 title: 04_how_java_works
 ---
 
-<steps>
-  <step>
+<Steps>
+  <Step>
     ## Basic Flow
 
     * To run **Hello World**, we need the **JVM (Java Virtual Machine)**.
     * **OS** works on hardware.
     * **JVM** works on top of OS → allows Java to be **platform independent**.
-  </step>
+  </Step>
 
-  <step>
+  <Step>
     ## Platform Independence
 
     * **Write Once, Run Anywhere (WORA):**
 
       * Code written on one machine can run on any other, **if JVM is installed**.
-  </step>
+  </Step>
 
-  <step>
+  <Step>
     ## Java Code Execution Flow
 
     1. Write Java code (`.java` file).
@@ -42,9 +42,9 @@ title: 04_how_java_works
     javac Hello.java    # Compile → generates Hello.class
     java Hello          # Run → output: Hello World
     ```
-  </step>
+  </Step>
 
-  <step>
+  <Step>
     ## Main Method Signature
 
     * **Required entry point** of every Java application:
@@ -54,25 +54,25 @@ title: 04_how_java_works
       ```
     * JVM **invokes `main`** to start execution.
     * Without this exact signature, program won’t run.
-  </step>
+  </Step>
 
-  <step>
+  <Step>
     ## Diagram 1 – Code to Execution
 
     ```
     Java Code (.java)  --javac-->  Bytecode (.class)  --JVM-->  Machine Code
     ```
-  </step>
+  </Step>
 
-  <step>
+  <Step>
     ## JDK, JRE, JVM
 
     * **JDK (Java Development Kit):** Development tools (compiler, debugger, JRE).
     * **JRE (Java Runtime Environment):** Libraries + JVM needed to run programs.
     * **JVM (Java Virtual Machine):** Executes bytecode.
-  </step>
+  </Step>
 
-  <step>
+  <Step>
     ## Diagram 2 – Inside JDK
 
     ```
@@ -82,14 +82,14 @@ title: 04_how_java_works
      │    └── JVM
      └── Tools (javac, debugger, etc.)
     ```
-  </step>
+  </Step>
 
-  <step>
+  <Step>
     ⚡ Key Points:
 
     * `.java` → source code
     * `.class` → bytecode
     * JVM executes bytecode
     * Java is **OOP**, hence class is mandatory
-  </step>
-</steps>
+  </Step>
+</Steps>
