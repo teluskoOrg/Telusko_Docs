@@ -21,7 +21,7 @@ function HeroSection() {
         transition={{ delay: 0.2, duration: 0.6 }}
       >
         <span className="font-UX font-[700] text-[#051A1E] dark:text-[#F4F4F4]">Telusko</span> <span 
-        className="font-Playfair font-medium"><i>Docs</i></span>
+        className="font-Playfair font-medium max-[418px]:block max-[418px]:-mt-7"><i>Docs</i></span>
       </motion.h1>
 
       <motion.p
