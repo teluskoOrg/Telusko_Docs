@@ -1,0 +1,101 @@
+---
+title: Type conversion in Java
+---
+
+<Steps>
+  <Step>
+    ## What is Type Conversion?
+
+    * Converting one data type into another.
+    * **Two types**:
+
+      1. **Widening (Implicit Conversion)** – smaller type → larger type (automatic).
+      2. **Narrowing (Explicit Casting)** – larger type → smaller type (manual).
+  </Step>
+
+  <Step>
+    ## Example 1 – Implicit Conversion (Widening)
+
+    ```java
+    public class Hello {
+        public static void main(String[] args) {
+            byte b = 127;
+            int a = b;     // Implicit conversion (byte → int)
+            System.out.println(a);   // 127
+        }
+    }
+    ```
+
+    ✅ Works because **int is larger than byte**.
+  </Step>
+
+  <Step>
+    ## Example 2 – Narrowing (Explicit Casting)
+
+    ```java
+    public class Hello {
+        public static void main(String[] args) {
+            int a = 256;
+            byte b = (byte) a;   // Explicit casting
+            System.out.println(b);  // Output: 0 (data loss)
+        }
+    }
+    ```
+
+    ⚠️ Narrowing may cause **data loss** or overflow.
+  </Step>
+
+  <Step>
+    ## Example 3 – Float to Int
+
+    ```java
+    float f = 5.6f;
+    int x = (int) f;   // Explicit casting
+    System.out.println(x);  // 5 (decimal lost)
+    ```
+  </Step>
+
+  <Step>
+    ## Invalid Example
+
+    ```java
+    int i = 5.7;  // ❌ Error → cannot assign decimal to int directly
+    ```
+  </Step>
+
+  <Step>
+    ## Type Promotion
+
+    * In expressions, smaller types are promoted to larger ones.
+    * Example:
+
+    ```java
+    byte a = 10;
+    byte b = 20;
+    // a + b → promoted to int
+    int result = a + b;
+    System.out.println(result);  // 30
+    ```
+  </Step>
+
+  <Step>
+    ## Direct Execution of `.java`
+
+    * Now we can directly run a Java file without separate compilation step:
+
+      ```bash
+      java Hello.java
+      ```
+    * This feature was added in **Java 11**.
+    * Java automatically compiles and runs the program in one step.
+  </Step>
+
+  <Step>
+    ## Summary
+
+    * **Widening (Implicit):** byte → short → int → long → float → double.
+    * **Narrowing (Explicit):** double → float → long → int → short → byte.
+    * Always use **casting** when moving from larger type → smaller type.
+    * **Type promotion** happens automatically in expressions.
+  </Step>
+</Steps>
