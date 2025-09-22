@@ -1,0 +1,121 @@
+---
+title: data types in java
+---
+
+<Steps>
+  <Step>
+    ## Types of Data Types
+
+    1. **Primitive Data Types** → Basic, simple, built-in.
+    2. **Non-Primitive Data Types** → Classes, Arrays, Strings, Objects, etc.
+
+    In this lecture → focus on **Primitive Data Types**.
+  </Step>
+
+  <Step>
+    ## Primitive Data Types
+
+    Divided into **4 categories**:
+
+    ### 1. Integer Types
+
+    * Used to store whole numbers.
+
+    | Type  | Size    | Range                                                   |
+    | ----- | ------- | ------------------------------------------------------- |
+    | byte  | 1 byte  | -128 to 127                                             |
+    | short | 2 bytes | -32,768 to 32,767                                       |
+    | int   | 4 bytes | -2,147,483,648 to 2,147,483,647                         |
+    | long  | 8 bytes | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 |
+
+    **Example:**
+
+    ```java
+    int num1 = 9;
+    byte by = 127;        // Max value of byte
+    short sh = 558;
+    long l = 5584L;       // Need 'L' at the end
+    ```
+
+    ***
+
+    ### 2. Floating-Point Types
+
+    * Used to store decimal values.
+
+    | Type   | Size    | Notes                       |
+    | ------ | ------- | --------------------------- |
+    | float  | 4 bytes | Use suffix `f` (e.g., 5.6f) |
+    | double | 8 bytes | Default type for decimals   |
+
+    **Example:**
+
+    ```java
+    float f = 5.8f;
+    double d = 5.6;   // By default, decimal is double
+    ```
+
+    ***
+
+    ### 3. Character Type
+
+    * Stores single characters (letters, symbols).
+    * Uses **Unicode** (so it can store all world languages).
+
+    | Type | Size    | Example         |
+    | ---- | ------- | --------------- |
+    | char | 2 bytes | `char c = 'k';` |
+
+    ***
+
+    ### 4. Boolean Type
+
+    * Stores only **true** or **false**.
+    * Not equivalent to 0/1 (unlike C/C++).
+
+    **Example:**
+
+    ```java
+    boolean b = true;
+    ```
+  </Step>
+
+  <Step>
+    ## Example Program
+
+    ```java
+    public class Hello {
+        public static void main(String[] args) {
+            int num1 = 9;
+            byte by = 127;
+            short sh = 558;
+            long l = 5584L;
+
+            float f = 5.8f;
+            double d = 5.6;
+
+            char c = 'k';
+            boolean b = true;
+
+            System.out.println("int: " + num1);
+            System.out.println("byte: " + by);
+            System.out.println("short: " + sh);
+            System.out.println("long: " + l);
+            System.out.println("float: " + f);
+            System.out.println("double: " + d);
+            System.out.println("char: " + c);
+            System.out.println("boolean: " + b);
+        }
+    }
+    ```
+  </Step>
+
+  <Step>
+    ## **Key Point Recap:**
+
+    * Java is **strongly typed** → must declare type for every variable.
+    * Use `L` for long, `f` for float.
+    * char uses **Unicode**.
+    * boolean → only `true`/`false`.
+  </Step>
+</Steps>
