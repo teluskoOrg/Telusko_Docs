@@ -25,7 +25,17 @@ function HeroSection() {
       </motion.h1>
 
       <motion.p
-        className="text-[1.5rem] text-[#2C2D2D] dark:text-[#EFEFEF] text-center"
+        className="sm:hidden text-[1.5rem] text-[#2C2D2D] dark:text-[#EFEFEF] text-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4, duration: 0.6 }}
+      >
+        Friendly documentation for tech stacks - from backend frameworks to frontend libraries, cloud platforms, and beyond.
+      </motion.p>
+
+
+      <motion.p
+        className="max-sm:hidden text-[1.5rem] text-[#2C2D2D] dark:text-[#EFEFEF] text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.6 }}
