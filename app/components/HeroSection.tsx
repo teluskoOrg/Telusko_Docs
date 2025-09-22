@@ -25,7 +25,7 @@ function HeroSection() {
       </motion.h1>
 
       <motion.p
-        className="sm:hidden text-[1.5rem] text-[#2C2D2D] dark:text-[#EFEFEF] text-center"
+        className="text-[1.5rem] text-[#2C2D2D] dark:text-[#EFEFEF] text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.6 }}
@@ -34,17 +34,6 @@ function HeroSection() {
       </motion.p>
 
 
-      <motion.p
-        className="max-sm:hidden text-[1.5rem] text-[#2C2D2D] dark:text-[#EFEFEF] text-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4, duration: 0.6 }}
-      >
-        Learning new technologies can feel overwhelming. 
-        Telusko Docs makes it simple by providing clear, structured, and 
-        beginner-friendly documentation for popular tech stacks — from backend 
-        frameworks to frontend libraries, cloud platforms, and beyond.
-      </motion.p>
 
       <Link to="/docs" className="w-fit">
         <motion.button
@@ -72,17 +61,6 @@ function HeroSection() {
         </motion.button>
       </Link>
 
-      <motion.p
-        className="text-[1.125rem] text-[#7F7F7F] dark:text-[#BBBBBB] text-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.8, duration: 0.6 }}
-      >
-        Jump into any tech stack you want to explore. 
-        Whether you’re building your first app or scaling a production system, 
-        Telusko Docs is your one-stop knowledge base. Our goal: help you 
-        understand, build, and scale projects faster.
-      </motion.p>
     </motion.div>
       <div className="max-[1050px]:p-4 pb-4">
         <motion.div

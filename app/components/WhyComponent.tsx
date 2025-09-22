@@ -17,7 +17,7 @@ function WhyComponent() {
           </div>
 
           {/* Text */}
-          <div>
+          <div className="">
             <h2 className="text-2xl font-semibold mb-2">One place, Many stacks</h2>
             <p className="text-gray-400 max-w-md">
               Instead of scattered tutorials and outdated articles, find all essential documentation neatly organized.

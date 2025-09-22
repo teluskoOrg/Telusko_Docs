@@ -1,7 +1,78 @@
-import React from 'react'
-import { Link } from 'react-router'
+import React, { useRef } from "react";
+import { Link, useNavigate } from "react-router";
 
-function WhatComponent() {
+const colorPallete = [
+  "#D7E9D1",
+  "#F2EFF9",
+  "#D3ECF0",
+  "#CFBBA2",
+  "#E8DFF5",
+  "#F9EAE1",
+  "#CCE2CB",
+  "#F6F7D7",
+];
+
+const sections = [
+  {
+    title: "Frontend Stacks",
+    description: "React, Angular, Vue",
+    icons: [
+      { src: "/icons/react1.png", alt: "React" , link : '' },
+      { src: "/icons/angular.png", alt: "Angular" , link : '' },
+      { src: "/icons/vue.png", alt: "Vue" ,  link : '' },
+    ],
+  },
+  {
+    title: "Backend Stacks",
+    description: "Spring Boot, Node.js, Django, Express",
+    icons: [
+      { src: "/icons/springboot.svg", alt: "Spring Boot" ,  link : '' },
+      { src: "/icons/nodejs.svg", alt: "Node.js" ,  link : '' },
+      { src: "/icons/django.svg", alt: "Django" ,  link : '' },
+      { src: "/icons/express.svg", alt: "Express" ,  link : '' },
+    ],
+  },
+  {
+    title: "Databases",
+    description: "MySQL, PostgreSQL, MongoDB, Redis",
+    icons: [
+      { src: "/icons/mysql.png", alt: "MySQL" ,  link : '' },
+      { src: "/icons/postgresql.png", alt: "PostgreSQL" ,  link : '' },
+      { src: "/icons/MongoDB.svg", alt: "MongoDB" ,  link : '' },
+      { src: "/icons/redis.png", alt: "Redis" ,  link : '' },
+    ],
+  },
+  {
+    title: "DevOps & Cloud",
+    description: "Docker, Kubernetes, AWS, Azure",
+    icons: [
+      { src: "/icons/docker.png", alt: "Docker" ,  link : '' },
+      { src: "/icons/kubernetes.svg", alt: "Kubernetes" ,  link : '' },
+      { src: "/icons/aws.svg", alt: "AWS" ,  link : '' },
+      { src: "/icons/azure.svg", alt: "Azure" ,  link : '' },
+    ],
+  },
+  {
+    title: "Programming Languages",
+    description: "Java, Python, JavaScript, Go, Rust",
+    icons: [
+      { src: "/icons/java.svg", alt: "Java",  link : 'docs/Java/core-java/01_java_introduction.md' },
+      { src: "/icons/python.svg", alt: "Python",  link : '' },
+      { src: "/icons/js.svg", alt: "JavaScript",  link : '' },
+      { src: "/icons/go.png", alt: "Go",  link : '' },
+      { src: "/icons/rust.png", alt: "Rust",  link : '' },
+    ],
+  },
+  {
+    title: "Extra Guides",
+    description: "Git, APIs, Testing, Security Best Practices",
+    icons: [{ src: "/icons/git.svg", alt: "Git" ,  link : '' }],
+  },
+];
+
+function WhatComponent({ setDocsMessage, id }) {
+  const navigate = useNavigate();
+
   return (
     <div className="my-40 px-4 md:px-8">
       <h1 className="text-center text-3xl font-bold mb-12">
@@ -9,123 +80,44 @@ function WhatComponent() {
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-        {/* Frontend */}
-        <div className="p-6 rounded-2xl shadow-lg border border-gray-200/20 bg-white/5 backdrop-blur-sm hover:shadow-xl transition">
-          <h3 className="text-xl font-semibold mb-4">Frontend Stacks</h3>
-          <div className="flex gap-4 items-center">
-            <div className="icon-wrapper">
-              <img className="icon" src="/icons/react1.png" alt="React" />
+        {sections.map((section,index) => (
+          <div
+            key={section.title}
+            style={{
+              background : `${colorPallete[index]}`
+            }}
+            className="p-6 rounded-2xl shadow-lg border border-gray-200/20 backdrop-blur-sm hover:shadow-xl transition"
+          >
+            <h3 className="text-xl text-[#3C3C43] font-semibold mb-4">{section.title}</h3>
+            <div className=" flex gap-4 flex-wrap items-center">
+              {section.icons.map((icon) => (
+                <button 
+                onClick={()=>{
+                  if(icon.link){
+                    navigate(icon.link);
+                  }else{
+                   
+                    setDocsMessage(true);
+                    if(id.current) clearTimeout(id.current);
+                    console.log(id.current,"form ");
+                    id.current = setTimeout(()=>{
+                      setDocsMessage(false);
+                    },2000)
+                    console.log(id.current);
+                  }
+                }}
+                key={icon.alt} 
+                className="icon-wrapper cursor-pointer">
+                  <img className="icon" src={icon.src} alt={icon.alt} />
+                </button>
+              ))}
             </div>
-            <div className="icon-wrapper">
-              <img className="icon" src="/icons/angular.png" alt="Angular" />
-            </div>
-            <div className="icon-wrapper">
-              <img className="icon" src="/icons/vue.png" alt="Vue" />
-            </div>
+            <p className="text-gray-600 mt-3">{section.description}</p>
           </div>
-          <p className="text-gray-400 mt-3">React, Angular, Vue</p>
-        </div>
-
-        {/* Backend */}
-        <div className="p-6 rounded-2xl shadow-lg border border-gray-200/20 bg-white/5 backdrop-blur-sm hover:shadow-xl transition">
-          <h3 className="text-xl font-semibold mb-4">Backend Stacks</h3>
-          <div className="flex gap-4 flex-wrap items-center">
-            <div className="icon-wrapper">
-              <img className="icon" src="/icons/springboot.svg" alt="Spring Boot" />
-            </div>
-            <div className="icon-wrapper">
-              <img className="icon" src="/icons/nodejs.svg" alt="Node.js" />
-            </div>
-            <div className="icon-wrapper">
-              <img className="icon" src="/icons/django.svg" alt="Django" />
-            </div>
-            <div className="icon-wrapper">
-              <img className="icon" src="/icons/express.svg" alt="Express" />
-            </div>
-          </div>
-          <p className="text-gray-400 mt-3">Spring Boot, Node.js, Django, Express</p>
-        </div>
-
-        {/* Databases */}
-        <div className="p-6 rounded-2xl shadow-lg border border-gray-200/20 bg-white/5 backdrop-blur-sm hover:shadow-xl transition">
-          <h3 className="text-xl font-semibold mb-4">Databases</h3>
-          <div className="flex gap-4 flex-wrap items-center">
-            <div className="icon-wrapper">
-              <img className="icon" src="/icons/mysql.png" alt="MySQL" />
-            </div>
-            <div className="icon-wrapper">
-              <img className="icon" src="/icons/postgresql.png" alt="PostgreSQL" />
-            </div>
-            <div className="icon-wrapper">
-              <img className="icon" src="/icons/MongoDB.svg" alt="MongoDB" />
-            </div>
-            <div className="icon-wrapper">
-              <img className="icon" src="/icons/redis.png" alt="Redis" />
-            </div>
-          </div>
-          <p className="text-gray-400 mt-3">MySQL, PostgreSQL, MongoDB, Redis</p>
-        </div>
-
-        {/* DevOps & Cloud */}
-        <div className="p-6 rounded-2xl shadow-lg border border-gray-200/20 bg-white/5 backdrop-blur-sm hover:shadow-xl transition">
-          <h3 className="text-xl font-semibold mb-4">DevOps & Cloud</h3>
-          <div className="flex gap-4 flex-wrap items-center">
-            <div className="icon-wrapper">
-              <img className="icon" src="/icons/docker.png" alt="Docker" />
-            </div>
-            <div className="icon-wrapper">
-              <img className="icon" src="/icons/kubernetes.svg" alt="Kubernetes" />
-            </div>
-            <div className="icon-wrapper">
-              <img className="icon" src="/icons/aws.svg" alt="AWS" />
-            </div>
-            <div className="icon-wrapper">
-              <img className="icon" src="/icons/azure.svg" alt="Azure" />
-            </div>
-          </div>
-          <p className="text-gray-400 mt-3">Docker, Kubernetes, AWS, Azure</p>
-        </div>
-
-        {/* Programming Languages */}
-        <div className="p-6 rounded-2xl shadow-lg border border-gray-200/20 bg-white/5 backdrop-blur-sm hover:shadow-xl transition">
-          <h3 className="text-xl font-semibold mb-4">Programming Languages</h3>
-          <div className="flex gap-4 flex-wrap items-center">
-            <div className="icon-wrapper">
-            <img className="icon" src="/icons/java.svg" alt="Java" />
-          
-            </div>
-            <div className="icon-wrapper">
-                 <img className="icon" src="/icons/python.svg" alt="Python" />
-            </div>
-
-            <div className="icon-wrapper">
-              <img className="icon" src="/icons/js.svg" alt="JavaScript" />
-            </div>
-            <div className="icon-wrapper">
-              <img className="icon" src="/icons/go.png" alt="Go" />
-            </div>
-            <div className="icon-wrapper">
-              <img className="icon" src="/icons/rust.png" alt="Rust" />
-            </div>
-          </div>
-          <p className="text-gray-400 mt-3">Java, Python, JavaScript, Go, Rust</p>
-        </div>
-
-        {/* Extra Guides */}
-        <div className="p-6 rounded-2xl shadow-lg border border-gray-200/20 bg-white/5 backdrop-blur-sm hover:shadow-xl transition">
-          <h3 className="text-xl font-semibold mb-4">Extra Guides</h3>
-          <div className="flex gap-4 flex-wrap items-center">
-            <div className="icon-wrapper">
-              <img className="icon" src="/icons/git.svg" alt="Git" />
-            </div>
-          </div>
-          <p className="text-gray-400 mt-3">Git, APIs, Testing, Security Best Practices</p>
-        </div>
-
+        ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default WhatComponent
+export default WhatComponent;

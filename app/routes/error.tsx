@@ -8,7 +8,7 @@ function error() {
     <p>Source doesn't exist</p>
     <div className='flex justify-center gap-4'>
         <button className='hero-btn bg-[#7F4BEA] hover:bg-[#6939c6]  text-white'>
-            <Link to="/dos">Home</Link>
+            <Link to="/docs">Home</Link>
             </button>
         </div>
     </div>
