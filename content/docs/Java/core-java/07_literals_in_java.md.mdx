@@ -1,0 +1,95 @@
+---
+title: Literals in Java
+---
+
+<Steps>
+  <Step>
+    ## What is a Literal?
+
+    * A **literal** is a constant value written directly in the code.
+    * Example:
+
+    ```java
+      int x = 10;   // 10 is a literal
+    ```
+  </Step>
+
+  <Step>
+    ## Types of Literals
+
+    ### 1. Integer Literals
+
+    * Can be written in **different number systems**:
+
+      ```java
+      int num1 = 0b101;      // Binary (prefix 0b) → 5
+      int num2 = 0x78;       // Hexadecimal (prefix 0x) → 120
+      int num3 = 1000_000_00; // Underscore for readability → 100000000
+      ```
+
+    ### 2. Floating-Point Literals
+
+    * Can be written using **decimal** or **scientific notation**:
+
+      ```java
+      double num4 = 12e10;   // 12 × 10^10
+      float f = 5.6f;        // float needs 'f'
+      double d = 5.6;        // double by default
+      ```
+
+    ***
+
+    ### 3. Character Literals
+
+    * Written inside **single quotes**:
+
+      ```java
+      char c1 = 'a';
+      char c2 = 65;     // Unicode/ASCII → 'A'
+      char c3 = '\u0041'; // Unicode literal → 'A'
+      ```
+
+    ### 4. Boolean Literals
+
+    * Only two possible values:
+
+      ```java
+      boolean b1 = true;
+      boolean b2 = false;
+      ```
+  </Step>
+
+  <Step>
+    ## Example Program
+
+    ```java
+    public class Hello {
+        public static void main(String[] args) {
+            int num1 = 0b101;         // Binary → 5
+            int num2 = 0x78;          // Hexadecimal → 120
+            int num3 = 1000_000_00;   // Readable large number
+            double num4 = 12e10;      // Scientific notation
+            char c = 'a';
+            c = (char)(c + 1);        // 'b'
+
+            boolean flag = true;
+            System.out.println(num1);
+            System.out.println(num2);
+            System.out.println(num3);
+            System.out.println(num4);
+            System.out.println(c);
+            System.out.println(flag);
+        }
+    }
+    ```
+  </Step>
+
+  <Step>
+    ## **Key Notes:**
+
+    * Use **underscores (`_`)** in numbers for readability.
+    * `0b` → binary, `0x` → hexadecimal.
+    * Floating literals can use **scientific notation** (`e`/`E`).
+    * Characters can be represented as **Unicode/ASCII** values.
+  </Step>
+</Steps>
