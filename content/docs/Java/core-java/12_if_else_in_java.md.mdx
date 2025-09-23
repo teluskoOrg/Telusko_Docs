@@ -1,0 +1,130 @@
+---
+title: If else in Java
+---
+
+<Video id="4Q7POjS7mQ" />
+
+<Steps>
+  <Step>
+    ## Conditional Statements
+
+    * **Decision-making** statements in Java.
+    * Used to control program flow based on conditions.
+
+    ### General Form:
+
+    ```java
+    if (condition) {
+        // executes if condition is true
+    } else {
+        // executes if condition is false
+    }
+    ```
+  </Step>
+
+  <Step>
+    ## Flowchart Representation
+
+    ```
+            [Condition?]
+               /   \
+            True    False
+            /          \
+     [Execute Block1]  [Execute Block2]
+    ```
+  </Step>
+
+  <Step>
+    ## Example – Car Speed
+
+    * If speed is **greater than allowed → decrease**
+    * If speed is **less than allowed → increase**
+    * If equal → stop / maintain speed
+  </Step>
+
+  <Step>
+    ## Example 1 – Basic If
+
+    ```java
+    public class Demo {
+        public static void main(String[] args) {
+            int x = 18;
+            if (x > 10) {
+                System.out.println("Hello");
+            }
+        }
+    }
+    ```
+
+    * If condition is `true` → block executes.
+    * If condition is `false` → block is skipped.
+  </Step>
+
+  <Step>
+    ## Example 2 – If with Else
+
+    ```java
+    int x = 8;
+    if (x > 10 && x <= 20) {   // 11 - 20
+        System.out.println("Hello");
+    } else {
+        System.out.println("Bye");
+    }
+    ```
+  </Step>
+
+  <Step>
+    ## **Note:**
+
+    * `if` can be used **alone**.
+    * `else` cannot be used without `if`.
+  </Step>
+
+  <Step>
+    ## Example 3 – Comparing Two Numbers
+
+    ```java
+    int x = 5;
+    int y = 7;
+
+    if (x > y) {
+        System.out.println(x);
+    } else {
+        System.out.println(y);
+    }
+    ```
+
+    👉 Output: **7**
+  </Step>
+
+  <Step>
+    ## Example 4 – Braces are Important
+
+    ```java
+    if (x > y)
+        System.out.println(x);
+        System.out.println("Thank you"); // Always executes, not part of if
+    else
+        System.out.println(y); // ❌ Error: 'else' without 'if'
+    ```
+
+    ✅ Correct way:
+
+    ```java
+    if (x > y) {
+        System.out.println(x);
+        System.out.println("Thank you");
+    } else {
+        System.out.println(y);
+    }
+    ```
+  </Step>
+
+  <Step>
+    ## Key Notes
+
+    * **Java does not depend on indentation** (unlike Python).
+    * Always use `{}` if more than one statement in a block.
+    * Helps avoid logical errors.
+  </Step>
+</Steps>
