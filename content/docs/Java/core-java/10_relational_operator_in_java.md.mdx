@@ -1,0 +1,58 @@
+---
+title: Relational Operator in Java
+---
+
+<Video id="TEJpeRI_NEo" />
+
+<Steps>
+  <Step>
+    ## What are Relational Operators?
+
+    * Used to **compare two values**.
+    * Result is always a **boolean** (`true` or `false`).
+  </Step>
+
+  <Step>
+    ## List of Relational Operators
+
+    | Operator | Meaning               | Example (`x=6, y=5`) | Result |
+    | -------- | --------------------- | -------------------- | ------ |
+    | `<`      | Less than             | `x < y` → `6 < 5`    | false  |
+    | `>`      | Greater than          | `x > y` → `6 > 5`    | true   |
+    | `<=`     | Less than or equal to | `x <= y` → `6 <= 5`  | false  |
+    | `>=`     | Greater or equal to   | `x >= y` → `6 >= 5`  | true   |
+    | `==`     | Equal to              | `x == y` → `6 == 5`  | false  |
+    | `!=`     | Not equal to          | `x != y` → `6 != 5`  | true   |
+  </Step>
+
+  <Step>
+    ## Example Program
+
+    ```java
+    public class Hello {
+        public static void main(String[] args) {
+            int x = 6;
+            int y = 5;
+
+            boolean r1 = x < y;
+            boolean r2 = x >= y;
+            boolean r3 = x != y;
+            boolean r4 = (x == y);
+
+            System.out.println("x < y : " + r1);
+            System.out.println("x >= y: " + r2);
+            System.out.println("x != y: " + r3);
+            System.out.println("x == y: " + r4);
+        }
+    }
+    ```
+  </Step>
+
+  <Step>
+    ## **Key Notes**:
+
+    * Relational operators are mostly used in **conditions** (like `if` statements, loops).
+    * Always return **true** or **false**.
+    * `==` checks **value equality**, not assignment.
+  </Step>
+</Steps>
