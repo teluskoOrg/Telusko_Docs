@@ -1,0 +1,76 @@
+---
+title: Arithmetic Operator in  Java
+---
+
+<Video id="flWjzwzgybI" />
+
+<Steps>
+  <Step>
+    ## Basic Arithmetic Operators
+
+    * Java provides operators to perform mathematical operations.
+
+    ```java
+    int num1 = 7;
+    int num2 = 5;
+
+    int add = num1 + num2;   // Addition → 12
+    int sub = num1 - num2;   // Subtraction → 2
+    int mul = num1 * num2;   // Multiplication → 35
+    int div = num1 / num2;   // Division → 1 (integer division)
+    int mod = num1 % num2;   // Modulus (remainder) → 2
+
+    System.out.println(add);
+    System.out.println(sub);
+    System.out.println(mul);
+    System.out.println(div);
+    System.out.println(mod);
+    ```
+
+    ⚠️ Note: Division between two integers gives **integer result**.
+    Example: `7 / 5 = 1` (decimal part discarded).
+  </Step>
+
+  <Step>
+    ## Assignment with Operators (Shorthand)
+
+    ```java
+    int num1 = 7;
+
+    num1 += 2;   // num1 = num1 + 2
+    num1 -= 2;   // num1 = num1 - 2
+    num1 *= 2;   // num1 = num1 * 2
+    num1 /= 2;   // num1 = num1 / 2
+    ```
+  </Step>
+
+  <Step>
+    ## Increment and Decrement
+
+    * **Post-Increment (`num1++`)** → use the value first, then increase.
+    * **Pre-Increment (`++num1`)** → increase first, then use the value.
+    * **Post-Decrement (`num1--`)** → use the value, then decrease.
+    * **Pre-Decrement (`--num1`)** → decrease first, then use the value.
+
+    ### Example:
+
+    ```java
+    int num = 5;
+
+    System.out.println(num++); // 5 (then num becomes 6)
+    System.out.println(++num); // 7 (increment first, then print)
+
+    System.out.println(num--); // 7 (then num becomes 6)
+    System.out.println(--num); // 5 (decrement first, then print)
+    ```
+  </Step>
+
+  <Step>
+    ## **Key Points Recap**:
+
+    * `%` (modulus) gives remainder.
+    * Integer division discards decimals.
+    * `++` and `--` differ in **order of operation** (pre vs post).
+    * Shorthand operators (`+=`, `-=`, `*=`) make code cleaner.
+  </Step>
+</Steps>
