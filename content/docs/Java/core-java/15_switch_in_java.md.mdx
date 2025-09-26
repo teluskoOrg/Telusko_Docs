@@ -1,0 +1,132 @@
+---
+title: Switch in Java
+---
+
+<Video id="IrQKDdptiw8" />
+
+<Steps>
+  <Step>
+    ## Why Switch?
+
+    * If you have **multiple conditions**, using many `if-else-if` blocks becomes lengthy.
+    * **Switch** provides a cleaner way to execute code based on a single variable’s value.
+  </Step>
+
+  <Step>
+    ## Example – Days of the Week
+
+    ### Using `if-else-if` (lengthy way)
+
+    ```java
+    int n = 1;
+
+    if (n == 1)
+        System.out.println("Monday");
+    else if (n == 2)
+        System.out.println("Tuesday");
+    else if (n == 3)
+        System.out.println("Wednesday");
+    else if (n == 4)
+        System.out.println("Thursday");
+    else if (n == 5)
+        System.out.println("Friday");
+    else if (n == 6)
+        System.out.println("Saturday");
+    else if (n == 7)
+        System.out.println("Sunday");
+    else
+        System.out.println("Invalid Day");
+    ```
+
+    ### Using `switch` (better way)
+
+    ```java
+    int n = 1;
+
+    switch (n) {
+        case 1:
+            System.out.println("Monday");
+            break;
+        case 2:
+            System.out.println("Tuesday");
+            break;
+        case 3:
+            System.out.println("Wednesday");
+            break;
+        case 4:
+            System.out.println("Thursday");
+            break;
+        case 5:
+            System.out.println("Friday");
+            break;
+        case 6:
+            System.out.println("Saturday");
+            break;
+        case 7:
+            System.out.println("Sunday");
+            break;
+        default:
+            System.out.println("Invalid Day");
+    }
+    ```
+  </Step>
+
+  <Step>
+    ## Key Points
+
+    ### 1. **Use of `break`**
+
+    * After a matching `case` is found, statements inside it run.
+    * Without `break`, execution **falls through** into the next cases.
+
+    Example:
+
+    ```java
+    int n = 1;
+    switch (n) {
+        case 1:
+            System.out.println("Monday");
+        case 2:
+            System.out.println("Tuesday");
+    }
+    ```
+
+    👉 Output:
+
+    ```
+    Monday
+    Tuesday
+    ```
+
+    (because no `break` after case 1)
+
+    ***
+
+    ### 2. **Use of `default`**
+
+    * Acts like an `else` block.
+    * Executes if **no case matches**.
+
+    ```java
+    int n = 9;
+
+    switch (n) {
+        case 1:
+            System.out.println("Monday");
+            break;
+        default:
+            System.out.println("Invalid Day");
+    }
+    ```
+
+    👉 Output: `Invalid Day`
+  </Step>
+
+  <Step>
+    ## Summary
+
+    * `switch` is cleaner than multiple `if-else-if`.
+    * Always use `break` to prevent fall-through.
+    * `default` ensures safe handling of invalid inputs.
+  </Step>
+</Steps>
