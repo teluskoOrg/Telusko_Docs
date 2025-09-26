@@ -1,0 +1,86 @@
+---
+title: Ternary Operator in Java
+---
+
+<Video id="kBdZBbWZ2a4" />
+
+<Steps>
+  <Step>
+    ## What is the Ternary Operator?
+
+    * A shorthand way of writing **if-else** in **one line**.
+    * Uses the symbols: `?:`
+    * Syntax:
+
+      ```java
+      condition ? value_if_true : value_if_false;
+      ```
+  </Step>
+
+  <Step>
+    ## Example 1 – Without Ternary
+
+    ```java
+    int n = 4;
+    int result = 0;
+
+    if (n % 2 == 0)
+        result = 10;
+    else
+        result = 20;
+
+    System.out.println(result);   // Output: 10
+    ```
+  </Step>
+
+  <Step>
+    ## Example 2 – With Ternary
+
+    ```java
+    int n = 4;
+    int result = 0;
+
+    result = (n % 2 == 0) ? 10 : 20;
+
+    System.out.println(result);   // Output: 10
+    ```
+  </Step>
+
+  <Step>
+    ## How It Works?
+
+    * If the **condition is true** → executes the value after `?`.
+    * If the **condition is false** → executes the value after `:`.
+  </Step>
+
+  <Step>
+    ## Example 3 – Find Maximum of Two Numbers
+
+    ```java
+    int a = 8, b = 5;
+    int max = (a > b) ? a : b;
+
+    System.out.println("Maximum: " + max); // Output: 8
+    ```
+  </Step>
+
+  <Step>
+    ## Example 4 – Nested Ternary
+
+    ```java
+    int marks = 75;
+    String grade = (marks >= 90) ? "A" :
+                   (marks >= 75) ? "B" :
+                   (marks >= 50) ? "C" : "Fail";
+
+    System.out.println("Grade: " + grade); // Output: B
+    ```
+  </Step>
+
+  <Step>
+    ## **Key Notes**:
+
+    * Ternary operator makes code **short and cleaner**.
+    * But avoid making it **too complex** (nested ternary) → reduces readability.
+  </Step>
+</Steps>
