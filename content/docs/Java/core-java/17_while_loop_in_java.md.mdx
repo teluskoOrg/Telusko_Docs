@@ -1,0 +1,111 @@
+---
+title: While Loop in Java
+---
+
+<Video id="mzt5tmV7wxI" />
+
+<Steps>
+  <Step>
+    ## Why While Loop?
+
+    * When we want to repeat a task **multiple times** until a condition is true.
+    * Syntax:
+
+    ```java
+    while (condition) {
+        // statements
+    }
+    ```
+
+    * Loop continues until the condition becomes **false**.
+  </Step>
+
+  <Step>
+    ## Example 1 – Infinite Loop
+
+    ```java
+    public class Demo {
+        public static void main(String[] args) {
+            while (true) {
+                System.out.println("Hi");
+            }
+        }
+    }
+    ```
+
+    👉 Prints `Hi` continuously **until memory runs out**.
+  </Step>
+
+  <Step>
+    ## Example 2 – Loop with Counter
+
+    ```java
+    int i = 1;
+    while (i <= 4) {
+        System.out.println("Hi " + i);
+        i++;
+    }
+    System.out.println("Bye " + i);
+    ```
+
+    👉 Output:
+
+    ```
+    Hi 1
+    Hi 2
+    Hi 3
+    Hi 4
+    Bye 5
+    ```
+  </Step>
+
+  <Step>
+    ## Example 3 – Nested While Loop
+
+    ```java
+    int i = 1;
+    while (i <= 4) {
+        System.out.println("Hi " + i);
+
+        int j = 1;
+        while (j <= 3) {
+            System.out.println("Hello " + j);
+            j++;
+        }
+
+        i++;
+    }
+    ```
+
+    👉 Output:
+
+    ```
+    Hi 1
+    Hello 1
+    Hello 2
+    Hello 3
+    Hi 2
+    Hello 1
+    Hello 2
+    Hello 3
+    Hi 3
+    Hello 1
+    Hello 2
+    Hello 3
+    Hi 4
+    Hello 1
+    Hello 2
+    Hello 3
+    ```
+  </Step>
+
+  <Step>
+    ## Key Notes
+
+    * **Initialization** must be done before loop (e.g., `int i = 1`).
+    * **Condition** checked before each iteration.
+    * **Update** (e.g., `i++`) ensures loop moves toward termination.
+    * Can be **nested** (loop inside loop).
+    * Without proper condition/update → may lead to **infinite loop**.
+  </Step>
+</Steps>
