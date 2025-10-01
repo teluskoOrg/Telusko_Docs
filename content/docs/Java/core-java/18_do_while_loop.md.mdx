@@ -1,0 +1,83 @@
+---
+title: Do While Loop in Java
+---
+
+<Video id="zzBVTwpfYr0" />
+
+<Steps>
+  <Step>
+    ## Why Do-While Loop?
+
+    * Sometimes we need a loop to **execute at least once**, even if the condition is false.
+    * `do-while` loop guarantees **one execution first**, then checks the condition.
+  </Step>
+
+  <Step>
+    ## Syntax
+
+    ```java
+    do {
+        // statements
+    } while (condition);
+    ```
+  </Step>
+
+  <Step>
+    ## Example 1 – Condition False but Runs Once
+
+    ```java
+    int i = 5;
+    do {
+        System.out.println("Hi " + i);
+    } while (i <= 4);
+    ```
+
+    👉 Output:
+
+    ```
+    Hi 5
+    ```
+
+    ⚡ Even though `i <= 4` is **false**, loop runs **once**.
+  </Step>
+
+  <Step>
+    ## Example 2 – Works Same as While When Condition True
+
+    ```java
+    int i = 1;
+    do {
+        System.out.println("Hi " + i);
+        i++;
+    } while (i <= 4);
+    ```
+
+    👉 Output:
+
+    ```
+    Hi 1
+    Hi 2
+    Hi 3
+    Hi 4
+    ```
+
+    ✅ Same result as `while` loop when condition is true.
+  </Step>
+
+  <Step>
+    ## Key Difference: **while vs do-while**
+
+    | Feature              | while loop                            | do-while loop                        |
+    | -------------------- | ------------------------------------- | ------------------------------------ |
+    | Condition checked    | Before execution                      | After execution                      |
+    | Executes at least 1? | ❌ Not guaranteed                      | ✅ Guaranteed                         |
+    | Usage                | When condition may be false initially | When we want execution at least once |
+  </Step>
+
+  <Step>
+    ## **Summary:**
+
+    * `while` → check first, then run.
+    * `do-while` → run first, then check.
+  </Step>
+</Steps>
