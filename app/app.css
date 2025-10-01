@@ -2,16 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 @import 'tailwindcss';
-@import 'fumadocs-ui/css/vitepress.css';
+@import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
 
 
 
 :root {
-  --color-fd-background: hsl(0, 0%, 100%);
+  --color-fd-background: #FBFBF6;
 }
 .dark {
-  --color-fd-background: #0F0F11;
+  --color-fd-background: #19191C;
 }
 
 
